@@ -43,7 +43,7 @@ public class StreamExamples {
 
         // Match
         boolean allArePrimeNumbers = list.stream().allMatch(i -> {
-            for(int u=2; i<i; i++) {
+            for(int u=2; i<u; u++) {
                 if(i % u == 0) {
                     return false;
                 }
