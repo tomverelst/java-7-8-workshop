@@ -16,7 +16,7 @@ public class Find extends SimpleFileVisitor<Path> { // Also check interface File
 
     public static void main(final String[] args) throws IOException {
         final FileVisitor<Path> fileVisitor = new Find();
-        final Path root = Paths.get("/Users/yannickdt/Desktop/interessant");
+        final Path root = Paths.get("/Users/tomverelst/Desktop");
         Files.walkFileTree(root, fileVisitor);
     }
 

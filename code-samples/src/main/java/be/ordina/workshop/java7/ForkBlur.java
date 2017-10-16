@@ -67,7 +67,7 @@ public class ForkBlur extends RecursiveAction {
 
     // Plumbing follows.
     public static void main(String[] args) throws Exception {
-        String filename = "/Users/yannickdt/Desktop/interessant/red-tulips.jpg";
+        String filename = "/Users/tomverelst/Desktop/duck.jpg";
         System.setProperty("java.awt.headless", "false");
         File file = new File(filename);
         BufferedImage image = ImageIO.read(file);

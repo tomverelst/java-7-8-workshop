@@ -17,7 +17,7 @@ public class NewFileAPI {
     public static void main(String[] args) {
         // Reading a file in Java 6
         try {
-            FileInputStream fstream = new FileInputStream("/Users/yannickdt/Desktop/interessant/test.txt");
+            FileInputStream fstream = new FileInputStream("/Users/tomverelst/Desktop/test.txt");
             DataInputStream in = new DataInputStream(fstream);
             BufferedReader br = new BufferedReader(new InputStreamReader(in));
             String strLine;
@@ -32,7 +32,7 @@ public class NewFileAPI {
         //Reading a file in Java 7
         try {
             List<String> lines = Files.readAllLines(
-                    FileSystems.getDefault().getPath("/Users/yannickdt/Desktop/interessant/test.txt"), StandardCharsets.UTF_8);
+                    FileSystems.getDefault().getPath("/Users/tomverelst/Desktop/test.txt"), StandardCharsets.UTF_8);
             for (String line : lines) {
                 System.out.println(line);
             }
@@ -47,7 +47,7 @@ public class NewFileAPI {
         final FileSystem fileSystem = FileSystems.getDefault();
         try (final WatchService watchService = fileSystem.newWatchService()) {
             final Map<WatchKey, Path> keyMap = new HashMap<>();
-            final Path path = FileSystems.getDefault().getPath("/Users/yannickdt/Desktop/interessant");
+            final Path path = FileSystems.getDefault().getPath("/Users/tomverelst/Desktop");
             try {
                 keyMap.put(path.register(watchService, StandardWatchEventKinds.ENTRY_CREATE, StandardWatchEventKinds.ENTRY_MODIFY, StandardWatchEventKinds.ENTRY_DELETE), path);
             } catch (IOException e) {
